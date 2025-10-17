@@ -1,0 +1,6 @@
+export * from './hero-section'
+export * from './about-section'
+export * from './experience-section'
+export * from './skills-section'
+export * from './projects-section'
+export * from './education-section'
