@@ -1,38 +1,41 @@
 import {
   AwsIcon,
+  JavascriptIcon,
   MongoIcon,
   NextJsIcon,
   NodeIcon,
   PlaywrightIcon,
+  PythonIcon,
   ReactIcon,
   TailwindIcon,
   TypescriptIcon,
 } from '@/assets'
+import { SectionTitle } from '@/components'
 import React from 'react'
 
 export const SkillsSection = () => {
   const skills = [
-    { name: 'TypeScript', level: 95, Icon: TypescriptIcon },
+    { name: 'Javascript', level: 95, Icon: JavascriptIcon },
+    { name: 'Typescript', level: 95, Icon: TypescriptIcon },
     { name: 'React', level: 95, Icon: ReactIcon },
     { name: 'Next.js', level: 90, Icon: NextJsIcon },
     { name: 'Node.js', level: 85, Icon: NodeIcon },
     { name: 'Tailwind CSS', level: 90, Icon: TailwindIcon },
     { name: 'Amazon Web Services', level: 80, Icon: AwsIcon },
     { name: 'MongoDB', level: 80, Icon: MongoIcon },
-    { name: 'Testing (Jest/Playwright)', level: 85, Icon: PlaywrightIcon },
+    { name: 'Playwright', level: 85, Icon: PlaywrightIcon },
+    { name: 'Python', level: 30, Icon: PythonIcon },
   ]
 
   return (
     <section id="skills" className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">
-          Technical Skills
-        </h2>
+        <SectionTitle>Technical Skills</SectionTitle>
         <div className="grid md:grid-cols-2 gap-6">
           {skills.map(({ name, level, Icon }, index) => (
             <div
               key={index}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
+              className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 text-sm md:text-base"
             >
               <div className="flex justify-between mb-2">
                 <div className="flex gap-1 items-center">

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { Braces, Linkedin, Mail } from 'lucide-react'
+import { Braces, Github, Linkedin, Mail } from 'lucide-react'
 import {
   AboutSection,
   EducationSection,
@@ -61,10 +61,11 @@ export const LandingPage = () => {
             <div className="flex items-center justify-center gap-2">
               <Braces strokeWidth={3} color="#50A2FF" />
               <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                LT
+                <p className="hidden md:block">LT</p>
+                <p className="md:hidden">Levan Tediashvili</p>
               </div>
             </div>
-            <div className="flex gap-8">
+            <div className="gap-8 hidden md:flex">
               {['About', 'Experience', 'Skills', 'Projects', 'Education'].map(
                 (item) => (
                   <button
@@ -112,6 +113,14 @@ export const LandingPage = () => {
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <Linkedin size={24} />
+            </a>
+            <a
+              href="https://github.com/lvntd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400 hover:text-cyan-300 transition-colors"
+            >
+              <Github size={24} />
             </a>
           </div>
           <p className="text-gray-500 mt-6">

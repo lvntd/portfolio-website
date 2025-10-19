@@ -1,3 +1,4 @@
+import { SectionTitle } from '@/components'
 import { ExternalLink } from 'lucide-react'
 import React from 'react'
 
@@ -5,12 +6,12 @@ export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-6 bg-slate-900/50">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">
-          Featured Project
-        </h2>
+        <SectionTitle>Featured Project</SectionTitle>
         <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/50 transition-all">
           <div className="flex justify-between items-start mb-4">
-            <h3 className="text-3xl font-bold text-cyan-400">Prive AI</h3>
+            <h3 className="text-xl md:text-3xl font-bold text-cyan-400">
+              Prive AI
+            </h3>
             <a
               href="https://priveai.ge/en"
               target="_blank"
@@ -21,12 +22,14 @@ export const ProjectsSection = () => {
               Visit Site
             </a>
           </div>
-          <p className="text-xl text-gray-300 mb-4">
+          <p className="text-sm md:text-base text-gray-300 mb-4">
             The first AI tax assistant in Georgia
           </p>
-          <p className="text-gray-400 mb-6">Launched March 2025</p>
+          <p className="text-gray-400 mb-6 text-sm md:text-base">
+            Launched March 2025
+          </p>
 
-          <div className="mb-6">
+          <div className="mb-6 text-sm md:text-base">
             <h4 className="font-semibold text-gray-200 mb-3">Tech Stack:</h4>
             <div className="flex flex-wrap gap-2">
               {[
