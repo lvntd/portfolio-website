@@ -5,7 +5,7 @@ export const ExperienceSection = () => {
   const experiences = [
     {
       title: 'Senior Software Engineer',
-      company: 'TNET LLC',
+      company: 'TNET',
       companyWebsite: 'https://tnet.ge/en',
       location: 'Georgia',
       period: '2023 – Present',
@@ -21,7 +21,7 @@ export const ExperienceSection = () => {
     },
     {
       title: 'Software Engineer',
-      company: 'Axon Development Group LLC',
+      company: 'Axon Development Group',
       companyWebsite: 'https://www.axon.dev',
       location: 'Ukraine',
       period: '2022 – 2023',
@@ -36,7 +36,7 @@ export const ExperienceSection = () => {
     },
     {
       title: 'Junior Software Engineer',
-      company: 'EPAM Systems Inc.',
+      company: 'EPAM Systems',
       companyWebsite: 'https://www.epam.com',
       location: 'Georgia',
       period: '2020 – 2022',
