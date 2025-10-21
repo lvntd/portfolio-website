@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { useTypingEffect } from '@/hooks'
+import { DraggableModal } from '@/components'
 import {
   Linkedin,
   Mail,
@@ -11,7 +12,6 @@ import {
   AppWindowMac,
 } from 'lucide-react'
 import clsx from 'clsx'
-import { DraggableModal } from '@/components'
 
 type Props = { onButtonClick: () => void }
 
@@ -57,6 +57,7 @@ export const HeroSection = ({ onButtonClick }: Props) => {
               className={clsx(
                 'text-xl md:text-3xl text-gray-300 mb-6',
                 showLaterClass,
+                'delay-100',
               )}
             >
               I am Levan
@@ -65,6 +66,7 @@ export const HeroSection = ({ onButtonClick }: Props) => {
               className={clsx(
                 'md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed whitespace-pre-line',
                 showLaterClass,
+                'delay-200',
               )}
             >
               {`Building exceptional web experiences with JavaScript.\n Transforming complex ideas into elegant, performant solutions.`}
@@ -75,6 +77,7 @@ export const HeroSection = ({ onButtonClick }: Props) => {
             className={clsx(
               'flex flex-col md:flex-row gap-6 justify-center mb-12 text-sm md:text-base',
               showLaterClass,
+              'delay-600',
             )}
           >
             <a
@@ -95,7 +98,7 @@ export const HeroSection = ({ onButtonClick }: Props) => {
             </a>
             <div
               onClick={() => setIsModalOpen(true)}
-              className="flex cursor-pointer items-center gap-2 px-6 py-3 border border-cyan-500 hover:bg-cyan-500/10 rounded-lg transition-all hover:scale-105"
+              className="hidden md:flex cursor-pointer items-center gap-2 px-6 py-3 border border-cyan-500 hover:bg-cyan-500/10 rounded-lg transition-all hover:scale-105"
             >
               <AppWindowMac size={20} />
               Documents
@@ -106,6 +109,7 @@ export const HeroSection = ({ onButtonClick }: Props) => {
             className={clsx(
               'flex gap-6 justify-center text-gray-400 text-sm md:text-base',
               showLaterClass,
+              'delay-1000',
             )}
           >
             <div className="flex items-center gap-2">
