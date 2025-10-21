@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+import { useTranslations } from 'next-intl'
+import { useTypingEffect } from '@/hooks'
 import {
   Linkedin,
   Mail,
@@ -13,33 +15,14 @@ import { DraggableModal } from '@/components'
 
 type Props = { onButtonClick: () => void }
 
-function useTypingEffect(text: string, speed = 50) {
-  const [displayedText, setDisplayedText] = useState('')
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  useEffect(() => {
-    if (currentIndex < text.length) {
-      const currentLetter = text[currentIndex]
-      const ms = currentLetter === ' ' ? speed * 5 : speed
-
-      const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + currentLetter)
-        setCurrentIndex((prev) => prev + 1)
-      }, ms)
-
-      return () => clearTimeout(timeout)
-    }
-  }, [currentIndex, text, speed])
-
-  const isFinished = displayedText === text
-
-  return { displayedText, isFinished }
-}
-
 export const HeroSection = ({ onButtonClick }: Props) => {
-  const { displayedText, isFinished } = useTypingEffect('Hello, world!', 100)
-
+  const t = useTranslations()
   const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const { displayedText, isFinished } = useTypingEffect(
+    t('HomePage.title'),
+    100,
+  )
 
   const showLaterClass = `${
     isFinished ? 'opacity-100' : 'opacity-0'

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Fira_Code } from 'next/font/google'
 import './globals.css'
+import { NextIntlClientProvider } from 'next-intl'
 
 const firaCode = Fira_Code({ weight: '500' })
 
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${firaCode.className}  antialiased`}>{children}</body>
+      <body className={`${firaCode.className}  antialiased`}>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      </body>
     </html>
   )
 }
